@@ -1,0 +1,26 @@
+{
+  "name": "data_api",
+  "version": "1.0.0",
+  "description": "Thin API to front the ES datastore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben Landau",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^2.2.0",
+    "aws-sdk": "^2.433.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "handlebars": "^4.0.12",
+    "ioredis": "^4.2.0",
+    "morgan": "^1.9.1",
+    "mustache": "^3.0.1",
+    "node-redis": "^0.1.7",
+    "pg": "^7.7.1",
+    "redis-clustr": "^1.6.0",
+    "request": "^2.88.0",
+    "winston": "^3.2.1"
+  }
+}

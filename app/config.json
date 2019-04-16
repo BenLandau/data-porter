@@ -1,0 +1,63 @@
+{
+    "connectors": {
+        "postgres" : {
+            "host":      "{{DB_HOST}}"
+            ,"database": "{{DB_NAME}}"
+            ,"user":     "{{DB_USER}}" 
+            ,"password": "{{DB_PASSWORD}}"
+        }
+    },
+    "callee_interface": {
+        "get": {
+            "action": "read",
+            "params": {
+                "body": [],
+                "uri": {
+                    "path": [
+                        {"name": "name","key":"person_name"}
+                    ]
+                }
+            } 
+        },
+        "put": {
+            "action": "update",
+            "params": {
+                "body": [],
+                "uri": null
+            }
+        },
+        "post": {
+            "action": "create",
+            "params": {
+                "body": [],
+                "uri": null
+            }
+        },
+        "delete": {
+            "action": "delete",
+            "params": {
+                "body": [],
+                "uri": null
+            }
+        }
+    },
+    "action_templates": {
+        "create": {
+            "connector": "postgres", 
+            "query": ""
+        },
+        "read": {
+            "connector": "postgres", 
+            "query": "select * from table where name = {{params.person_name}}" 
+        },
+        "update": {
+            "connector": "postgres", 
+            "query": null
+        },
+        "delete": {
+            "connector": "postgres", 
+            "query": null
+        }
+    }
+}
+
